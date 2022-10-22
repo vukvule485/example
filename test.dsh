@@ -1,0 +1,4 @@
+dash LINE on {1} [
+  pull new rep &{'test'}
+  dash acc push rep:('test')
+]
