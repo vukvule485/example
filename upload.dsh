@@ -19,3 +19,4 @@ on request.user.input('y' or 'n') do [
   if 'y' then [rep on .;write in brackets of new inputdata from UPLOAD{Local_.user}, data to user..UploadData if true do push branch:(1, data) on {pull BranchData to inputdata{UploadData, UPLOAD{user..BranchData}}}]
   elseif 'n' then [dash breakapp]
 ]
+dash main exec DATA{Local_.user, .;read inputdata from git}
