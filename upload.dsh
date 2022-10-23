@@ -4,7 +4,18 @@ dash on new UPLOAD{user} [
     .;write new func BranchOnUse{user} [
       on new upload push branch {1}
       of .;read.set:("exp") in brackets read:(push existing branch on dash/..sel)
-        .;read ALL
+        .;read on BRACKETS /..;write:(pull 'expBranch':(data) from branch /Dash to user..maindir )
+        .;write expBranch.data to user..maindir from BRACKETS
+        set new branchData to user..maindir
     ]
   ]
+  BranchOnUse{Local_.user}
+  branch.read:(Local_.user..maindir)
+]
+dash on new DATA{user, data}
+  pull branch on BranchData, data
+  push branch:(user), data, BranchData
+on request.user.input('y' or 'n') do [
+  if 'y' then [rep on .;write in brackets of new inputdata from UPLOAD{Local_.user}, data to user..UploadData if true do push branch:(1, data) on {pull BranchData to inputdata{UploadData, UPLOAD{user..BranchData}}}]
+  elseif 'n' then [dash breakapp]
 ]
