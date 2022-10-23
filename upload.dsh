@@ -1,0 +1,10 @@
+dash on new UPLOAD{user} [
+  push new expBranch on user/..sel
+  on expBranch if .;read{dash/user..sel} get [
+    .;write new func BranchOnUse{user} [
+      on new upload push branch {1}
+      of .;read.set:("exp") in brackets read:(push existing branch on dash/..sel)
+        .;read ALL
+    ]
+  ]
+]
