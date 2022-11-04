@@ -7,6 +7,7 @@ dash on new UPLOAD{user} [
         .;read on BRACKETS /..;write:(pull 'expBranch':(data) from branch /Dash to user..maindir )
         .;write expBranch.data to user..maindir from BRACKETS
         set new branchData to user..maindir
+        accel branchdata to .;write:(push data to user)
     ]
   ]
   BranchOnUse{Local_.user}
